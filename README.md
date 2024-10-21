@@ -66,18 +66,30 @@ techniques, tools, and processes you used to accomplish the project's goals. Her
 
 ### Visuals
 
-#### Figure 1: [Figure Title]
+#### Figure 1: [Cryptocurrencies Over TIme]
 ![Figure 1](https://github.com/pixare7/CryptoClustering/blob/main/images/fig01.png)
 
 *This plots the price percentage change over time for each cryptocurrency.*
 
-| ![Figure 2](https://github.com/pixare7/CryptoClustering/blob/main/images/fig02.png) | ![Figure 3](https://github.com/pixare7/CryptoClustering/blob/main/images/fig03.png) |
-|:-------------------------------:|:-------------------------------:|
-| **Figure 2:** *the elbow method on the scaled dataframe indicates that the best value for k is 4* | **Figure 3:** *using the elbow method on the scaled PCA dataframe also suggests that the best value for k is 4* |
+#### Figure 2: [Elbow Curve]
+![Figure 2](https://github.com/pixare7/CryptoClustering/blob/main/images/fig02.png)
 
-| ![Figure 4](https://github.com/pixare7/CryptoClustering/blob/main/images/fig04.png) | ![Figure 5](https://github.com/pixare7/CryptoClustering/blob/main/images/fig05.png) |
-|:-------------------------------:|:-------------------------------:|
-| **Figure 4:** *the cryptocurrencies were clustered using k=4 on the scaled dataframe* | **Figure 5:** *the clusters were optimized using PCA* |
+*The elbow method on the scaled dataframe indicates that the best value for k is 4.*
+
+#### Figure 3: [Elbow Curve Using PCA Data]
+![Figure 3](https://github.com/pixare7/CryptoClustering/blob/main/images/fig03.png)
+
+*Using the elbow method on the scaled PCA dataframe also suggests that the best value for k is 4.*
+
+#### Figure 4: [Scatter Plot]
+![Figure 4](https://github.com/pixare7/CryptoClustering/blob/main/images/fig04.png)
+
+*The cryptocurrencies were clustered using k=4 on the scaled dataframe.*
+
+#### Figure 5: [Scatter Plot Using PCA Data]
+![Figure 5](https://github.com/pixare7/CryptoClustering/blob/main/images/fig05.png)
+
+*The clusters were optimized using PCA.*
 
 ## Conclusions
 
