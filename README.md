@@ -1,7 +1,7 @@
 # CryptoClustering
 
 ## Overview
-This project uses machine learning techniques to predict if cryptocurrencies are affected by 24-hour or 7-day price changes. 
+This project applies machine learning techniques to determine whether cryptocurrencies are affected by 24-hour or 7-day price changes by grouping them into clusters.
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -15,86 +15,71 @@ This project uses machine learning techniques to predict if cryptocurrencies are
 ## Project Details
 
 ### Goals
-Use unsupervised learning:
-   - normalize the data
-   - find the best value for k in the scaled dataframe
-   - cluster cryptocurrencies with k-means using the scaled dataframe
-   - optimize clusters with Principal Component Analysis (PCA)
-   - Find the best value for k using the PCA dataframe
-   - cluster the cryptocurrencies with k means using the pca dataframe
+The primary goal is to use unsupervised learning techniques to:
+   - Normalize the data.
+   - Identify the optimal number of clusters (k) for the scaled dataset.
+   - Cluster cryptocurrencies using k-means on the scaled dataset.
+   - Optimize the clustering using Principal Component Analysis (PCA).
+   - Identify the best k value using the PCA-transformed data.
+   - Cluster cryptocurrencies based on the PCA-reduced data.
 
 ### Methodology
-Detail the approach and methods used to achieve the project's goals.
-
-In the "Methodology" section, you would typically describe the specific approaches, 
-techniques, tools, and processes you used to accomplish the project's goals. Here are some examples of what you might include:
+This section outlines the steps taken to achieve the project goals:
 
 1. **Data Collection:**
-   - The cryptocurrency data was collected on a CSV file
+   - Cryptocurrency data was collected in a CSV file.
 
-2. **Data Cleaning:**
-   - the StandardScaler() module from scikit-learn was used to normalize the data from the CSV file
+2. **Data Preprocessing:**
+   - The `StandardScaler` from scikit-learn was used to normalize the data, ensuring all features have a similar scale.
 
-3. **Data Transformation:**
-   - the StandardScaler() module from scikit-learn was used to normalize the data from the CSV file
-   - Principal Component Analysis (PCA) was used to extract the most essential features which account for most variability in the data to later predict the clusters
+3. **Dimensionality Reduction with PCA:**
+   - PCA was applied to extract the most important features, reducing the data to key components that account for the majority of variance.
 
 4. **Exploratory Data Analysis (EDA):**
-   - A summary statistics table was created to show the count, mean, standard deviation, min quartiles, and max of the price_change_percentage_24h, price_change_percentage_7d,
-       price_change_percentage_14d, price_change_percentage_30d, price_change_percentage_60d, price_change_percentage_200d, price_change_percentage_1y columns. 
-   - hvplot.pandas was used to visualize price performance of different crypto currencies over time
-   - same library was used to plot elbow curves to determine ethe best k value to use to cluster cryptocurrencies
-   - the same library was used to plot the cluster cryptocurrency scatter plots clusters
-   
-5. **Data Analysis:**
-   - A plot of price performance of different crypto currencies over time was used to examine the flucuation of cryptocurrencies over 24 hour, 7 day, 14 day, 30 day, 60 day, 200 day, and one year.  
-   - the scatterplots were used to analyze if there is a pattern between cryptocurrencies affected by 24 hour price changes vs 7 hour price changed and cluster them
+   - Summary statistics were generated to provide insights into key cryptocurrency metrics (e.g., 24-hour, 7-day, 30-day price changes).
+   - `hvplot.pandas` was used for visualizing cryptocurrency price performance over time.
+   - Elbow curves were plotted to determine the optimal number of clusters (k) for both the scaled and PCA-transformed data.
+   - Scatter plots were generated to visualize the clustering results.
 
-6. **Modeling and Prediction:**
-   - k means model was initialized. the k means model was fitted using teh scaled dataaframe.  then the model was used to predict the clusters to group the cryptocurrencies based on the scaled dataframe
-   - the clusters were then optimized with PCA to reduce features to three principal components
+5. **Clustering and Model Analysis:**
+   - The k-means algorithm was implemented, and the scaled data was used to fit the model and predict clusters.
+   - PCA was applied to further optimize the clustering by reducing the feature space to three principal components, improving the model’s interpretability.
 
-7. **Visualization:**
-   - A summary statistics table was created to show the count, mean, standard deviation, min quartiles, and max of the price_change_percentage_24h, price_change_percentage_7d,
-       price_change_percentage_14d, price_change_percentage_30d, price_change_percentage_60d, price_change_percentage_200d, price_change_percentage_1y columns. 
-   - hvplot.pandas was used to visualize price performance of different crypto currencies over time
-   - same library was used to plot elbow curves to determine ethe best k value to use to cluster cryptocurrencies
-   - the same library was used to plot the cluster cryptocurrency scatter plots clusters
-
-8. **Tools and Libraries:**
-    - pandas, hvplot.pandas, from sklearn.cluster import KMeans, from sklearn.decomposition, import PCA from sklearn.preprocessing, StandardScaler, matplotlib.pyplot, seaborn
+6. **Tools and Libraries:**
+   - Key libraries used: `pandas`, `hvplot.pandas`, `scikit-learn` (for KMeans, PCA, and StandardScaler), `matplotlib.pyplot`, and `seaborn`.
 
 ### Visuals
 
-#### Figure 1: [Cryptocurrencies Over TIme]
+#### Figure 1: Cryptocurrency Price Changes Over Time
 ![Figure 1](https://github.com/pixare7/CryptoClustering/blob/main/images/fig01.png)
 
-*This plots the price percentage change over time for each cryptocurrency.*
+*This plot shows the percentage price change over time for each cryptocurrency.*
 
-#### Figure 2: [Elbow Curve]
+#### Figure 2: Elbow Method for Scaled Data
 ![Figure 2](https://github.com/pixare7/CryptoClustering/blob/main/images/fig02.png)
 
-*The elbow method on the scaled dataframe indicates that the best value for k is 4.*
+*The elbow method applied to the scaled data indicates that the optimal number of clusters (k) is 4.*
 
-#### Figure 3: [Elbow Curve Using PCA Data]
+#### Figure 3: Elbow Method for PCA-Transformed Data
 ![Figure 3](https://github.com/pixare7/CryptoClustering/blob/main/images/fig03.png)
 
-*Using the elbow method on the scaled PCA dataframe also suggests that the best value for k is 4.*
+*The elbow method applied to the PCA-transformed data also suggests that the optimal value for k is 4.*
 
-#### Figure 4: [Scatter Plot]
+#### Figure 4: Cryptocurrency Clusters (Scaled Data)
 ![Figure 4](https://github.com/pixare7/CryptoClustering/blob/main/images/fig04.png)
 
-*The cryptocurrencies were clustered using k=4 on the scaled dataframe.*
+*Cryptocurrencies clustered using k=4 on the scaled data.*
 
-#### Figure 5: [Scatter Plot Using PCA Data]
+#### Figure 5: Optimized Clusters (PCA-Transformed Data)
 ![Figure 5](https://github.com/pixare7/CryptoClustering/blob/main/images/fig05.png)
 
-*The clusters were optimized using PCA.*
+*Clusters optimized using PCA, reducing the features to three principal components.*
 
 ## Conclusions
-
-The clustering prediction shows that cryptocurrencies that tend to have larger price changes over 24 hours also tend to have larger price changes over 7 days.
+The clustering analysis reveals that cryptocurrencies exhibiting larger price changes over 24 hours also tend to have more significant fluctuations over 7 days, suggesting a relationship between short-term and mid-term price movements.
 
 ## Future Work
-Discuss any potential extensions, improvements, or follow-up projects 
-that could build on the work done in this project.
+Future improvements could include:
+   - Exploring other clustering algorithms such as DBSCAN or hierarchical clustering.
+   - Analyzing additional time periods or features to further understand cryptocurrency trends.
+   - Implementing a more advanced model that incorporates real-time data for ongoing predictions.
