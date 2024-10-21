@@ -78,11 +78,10 @@ This section outlines the steps taken to achieve the project goals:
 *Clusters optimized using PCA, reducing the features to three principal components.*
 
 ## Conclusions
-The clustering analysis shows that cryptocurrencies experiencing significant price changes over 24 hours tend to exhibit similar behavior over 7-day periods. 
-This suggests a correlation between short-term volatility and mid-term performance, providing valuable insights for investors. 
+- The clustering analysis reveals that cryptocurrencies with significant 24-hour price changes often display similar behavior over 7 days, providing insights that can help investors, particularly in Bitcoin, make more informed decisions about future price movements.
+- Principal Component Analysis (PCA) improved cluster clarity by highlighting key features, offering deeper insights into price patterns.
 
 ## Future Work
 Future improvements could include:
-   - Exploring other clustering algorithms such as DBSCAN or hierarchical clustering.
    - Analyzing additional time periods or features to further understand cryptocurrency trends.
    - Implementing a more advanced model that incorporates real-time data for ongoing predictions.
