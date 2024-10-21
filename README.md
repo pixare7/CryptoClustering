@@ -1,7 +1,9 @@
 # CryptoClustering
 
 ## Overview
-This project applies machine learning techniques to determine whether cryptocurrencies are affected by 24-hour or 7-day price changes by grouping them into clusters.
+This project utilizes machine learning techniques, specifically clustering, to analyze the price behavior of cryptocurrencies over short-term (24-hour) and mid-term (7-day) periods. 
+By grouping cryptocurrencies based on their price changes, we can identify patterns that help predict future price movements. 
+This analysis is crucial for investors seeking to make informed decisions about cryptocurrency investments, particularly Bitcoin, by understanding how short- and mid-term fluctuations might affect future performance.
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -76,7 +78,8 @@ This section outlines the steps taken to achieve the project goals:
 *Clusters optimized using PCA, reducing the features to three principal components.*
 
 ## Conclusions
-The clustering analysis reveals that cryptocurrencies exhibiting larger price changes over 24 hours also tend to have more significant fluctuations over 7 days, suggesting a relationship between short-term and mid-term price movements.
+The clustering analysis shows that cryptocurrencies experiencing significant price changes over 24 hours tend to exhibit similar behavior over 7-day periods. 
+This suggests a correlation between short-term volatility and mid-term performance, providing valuable insights for investors. 
 
 ## Future Work
 Future improvements could include:
